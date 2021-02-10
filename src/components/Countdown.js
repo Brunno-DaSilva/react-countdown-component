@@ -9,7 +9,18 @@ const Countdown = () => {
 
   return (
     <div className="Countdown">
-      <div></div>
+      <div className="info__countdown--time">
+        <p>Days</p>
+      </div>
+      <div className="info__countdown--time">
+        <p>Hours</p>
+      </div>
+      <div className="info__countdown--time">
+        <p>Minutes</p>
+      </div>
+      <div className="info__countdown--time">
+        <p>Seconds</p>
+      </div>
     </div>
   );
 };
