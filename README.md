@@ -2,7 +2,7 @@
 
 Simple React Hooks Countdown component
 
-Featuring:
+## Featuring:
 
     - Create-React-App
     - Node Sass
