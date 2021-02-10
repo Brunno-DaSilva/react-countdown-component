@@ -9,4 +9,4 @@ Simple React Hooks Countdown component
     - React Hooks
     - Wallpaper Abyss
 
-### Demo:demo coming soon
+### Demo: https://react-countdown-component.herokuapp.com/
