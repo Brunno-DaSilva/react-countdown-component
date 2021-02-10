@@ -1,2 +1,19 @@
 .Countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .info__countdown--time {
+    line-height: 0.5rem;
+    padding: 0.5rem 1rem;
+
+    p {
+      color: white;
+      font-size: 1.5rem;
+    }
+    .zeros {
+      color: white;
+      font-size: 4rem;
+    }
+  }
 }

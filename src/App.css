@@ -1,3 +1,16 @@
 .App {
-  text-align: center;
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 13rem;
+  color: #973428;
+  letter-spacing: -23px;
+  line-height: 2rem;
+  text-transform: uppercase;
 }

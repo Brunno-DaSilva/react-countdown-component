@@ -11,9 +11,10 @@ const Countdown = () => {
 
   const startCountdown = () => {
     const COUNTDOWN_START_DATE = new Date("March 26, 2021 00:00:00").getTime();
+
     timeInterval = setInterval(() => {
       const NOW = new Date().getTime();
-      const distance = (COUNTDOWN_START_DATE = NOW);
+      const distance = COUNTDOWN_START_DATE - NOW;
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
@@ -27,7 +28,7 @@ const Countdown = () => {
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       if (distance < 0) {
-        clearInterval(interval.current);
+        clearInterval(timeInterval.current);
       } else {
         setCountdownDays(days);
         setCountdownHours(hours);
@@ -40,26 +41,26 @@ const Countdown = () => {
   useEffect(() => {
     startCountdown();
     return () => {
-      clearInterval(interval.current);
+      clearInterval(timeInterval.current);
     };
   });
 
   return (
     <div className="Countdown">
       <div className="info__countdown--time">
-        <p className="zeros">{timerDays}</p>
+        <p className="zeros">{countdownDays}</p>
         <p>Days</p>
       </div>
       <div className="info__countdown--time">
-        <p className="zeros">{timerHours}</p>
+        <p className="zeros">{countdownHours}</p>
         <p>Hours</p>
       </div>
       <div className="info__countdown--time">
-        <p className="zeros">{timerMinutes}</p>
+        <p className="zeros">{countdownMinutes}</p>
         <p>Minutes</p>
       </div>
       <div className="info__countdown--time">
-        <p className="zeros">{timerSeconds}</p>
+        <p className="zeros">{countdownSeconds}</p>
         <p>Seconds</p>
       </div>
     </div>
